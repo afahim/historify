@@ -1,0 +1,18 @@
+ <div class="image">
+        <img src="{{p.url}}"/>
+        <div class="caption">{{p.caption}}</div>
+        <div class="comments">
+             {% if comment_list %}
+             {% for c in comment_list %}
+                <div class='comment'> 
+                    <div class="date">{{c.pub_date}}</div>
+                    <div class='name'>{{c.name}}</div>
+                    <div class='delete'><a href='{% url WebGallery.views.delete p.id c.id %}'>Delete</a></div>
+                    <div class='text'>{{c.text}}</div>
+                </div>
+             {% endfor %}
+             {% else %}
+                    <p>No comments</p>
+             {% endif %}
+        </div>
+    </div>

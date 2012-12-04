@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--
+    Copyright (C) 2009 Charles Ying. All Rights Reserved.
+    This source code is available under Apache License 2.0.
+    
+    Performance Notes (courtesy of Apple):
+    	on leopard, if animating transforms with a transform list > 1 function, animation falls back to software
+    	shadows (and animated shadows) plus border animations can cause additional redraws
+    	(not fixed) css selectors are expensive
+-->
+
+<title>KASHKOOL</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/snowbox.js"></script>
+<link rel="stylesheet" type="text/css" href="css/snowstack.css" />
+
+</head>
+
+<body onLoad="populateTags()">
+<div id="searchbar">
+	<ul id="taglist"></ul>
+	<div class="search"><input type = "text" id="search" /> <a class="searchsubmit doSearch" href="#" onClick='searchTag();'>Search for tags</a> </div>
+</div>
+<div class="page view">
+<div class="origin view">
+	<div id="camera" class="view">
+		<div id="dolly" class="view">
+			<div id="stack" class="view">
+			</div>
+			<div id="mirror" class="view">
+				<div id="rstack" class="view">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+<div id="comments"> 
+</div>
+
+<div id="hidden"></div>
+
+</body>
+
+</html>
+
+
