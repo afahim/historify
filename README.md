@@ -1,7 +1,7 @@
 Historify
 ========
 
-Map based web application that allows you to document the transformation of a city using text, pictures, audio and video, and a timeline!
+Map based web application that allows you to document the transformation of a city using text, pictures, audio and video!
 
 The app is built using HTML5 and Django, and currently supports the  map of Doha, Qatar.
 
