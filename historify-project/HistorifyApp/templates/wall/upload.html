@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <form enctype="multipart/form-data" 
+            action="{% url walls.views.add %}" method="post">
+            <label for="media">File to upload</label><input type="file" name="media" /> 
+            <label for="title">Title</label><input type="text" name="title" />
+            <label for="tags">Comma separated list of tags:</label><input type="text" name="tags"  />
+            <input type="submit">
+        </form>
+{% endblock %}

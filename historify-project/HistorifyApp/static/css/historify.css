@@ -1,0 +1,72 @@
+/* Your CSS code goes here */
+
+html, body, header { padding: 0px; }
+
+html { overflow: hidden; }
+	
+	body  { 
+		position:relative; 
+		background-image: url(zaidImages/map.png); 
+		background-repeat: no-repeat;
+		margin:0 5px;
+	}
+	
+	header {
+		background-color: rgba(0,0,0,0.5);
+		background-color: -webkit-gradient(linear, 74% 100%, 0% 19%, from(#141616), to(#514F4B));
+		width: 1280px;
+		height: 100px;
+		color: white;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+	}
+	
+	h1 {
+		font-family: 'Rokkitt', serif;
+		margin: 10px;
+		font-size: 72px;
+		font-weight:400; 
+		color: #eee;
+	}
+	
+		h1 span {
+			font-weight:700;
+			color: #e9c274;
+		}
+		
+	h2 {
+		font-family: 'Josefin Slab', serif;
+		font-size: 28px;
+		font-weight:300; 
+		color: #222;
+	}
+	
+	p {
+		font-family: 'Josefin Sans', sans-serif;
+		font-weight:300; 
+		color: #222;
+	}
+		
+	#logos {
+		float: right;
+		position: relative;
+		top: -72px;
+	}
+
+#sliderContainer {
+	position: fixed;
+
+	top: 670px;
+	left: 14px; /* 1280/2 - 450/2 = 415PX */
+	
+	width : 450px;
+	font-size: 150%;		
+	
+	padding: 0px 15px 10px 15px;
+	border: #b6430c 0.25px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+	#sliderContainer p{
+		color: #eee;
+	}

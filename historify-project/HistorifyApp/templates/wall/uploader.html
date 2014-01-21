@@ -1,0 +1,37 @@
+{% extends "wall/base.html" %}
+
+{% block header %}
+<script src="/wall/js/dragndrop.js" type="text/javascript"></script>
+<script src="/wall/js/uploader.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="uploader">
+         <form enctype="multipart/form-data" action="{% url wall.views.add %}" method="post">
+                 <div class="uploaderItem" id="uploaderCaption"> 
+                     <label for='title'>Caption:</label><input type="text" name="title"/>
+                     <label for="tags">Comma separated list of tags:</label><input type="text" name="tags"  />
+                 </div>
+                 <div class="uploaderItem" id="uploaderUrlOption"> 
+                     <label for='title'>Image URL</label><input type="radio" name="uploadType" value="url" onclick="showURLUploader();"/ onchange="$('#imagePreview').html('');"> 
+                 </div>
+                 <div class="uploaderItem" id="uploaderUrl">
+                     <label for='url'>Enter URL</label>
+                     <input type="text" name="url"/>
+                     <a href="#" onclick="previewUrl();return false;">preview</a>
+                 </div>
+                 <div class="uploaderItem" id="uploaderFileOption"> 
+                     <label for='title'>Image File</label><input type="radio" name="uploadType" value="file" onclick="showFileUploader();" onchange="$('#imagePreview').html('');"/>
+                 </div>
+                 <div class="uploaderItem" id="uploaderFile">
+                     <label for='title'>Select a file</label><input id="upload" type="file" name="file"/>
+                 </div>
+                 <p>
+            </form>
+          <div class="uploaderItem" id="uploaderSubmit">
+                 <a href="#" onclick="add();return false;">Add to the gallery</a>
+          </div>
+    </div>
+    <div id="imagePreview">
+    </div>
+{% endblock %}
